@@ -7,4 +7,8 @@ Setup for basic tools with new host PC: ssh, vim, tmux, ...
 Extract .vim.tar.gz to home folder.
 
 # Setup tmux
-Copy .tmux.conf to home folder.
+`sudo apt-get install tmux`
+
+`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+
+`Copy .tmux.conf to home folder.`
