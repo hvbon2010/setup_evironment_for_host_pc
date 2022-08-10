@@ -38,3 +38,18 @@ fi
 `/bin/ip route add 10.148.0.0/14 dev $PRIVATE`: Route all ip 10.148.x.x to private network.
 
 `/bin/ip route add default dev $PUBLIC`: Route other IPs to public network.
+
+Verify this script is worked:
+
+```
+sudo ifconfig eth0 down
+sudo ifconfig eth1 down
+sudo ifconfig eth0 up
+sudo ifconfig eth1 up
+```
+
+`ip route show`
+
+<img width="553" alt="image" src="https://user-images.githubusercontent.com/32226325/183931406-76a8c480-1ce0-47d1-a0f8-41ffdd72a215.png">
+
+
