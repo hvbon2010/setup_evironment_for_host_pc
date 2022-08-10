@@ -37,4 +37,4 @@ fi
 
 `/bin/ip route add 10.148.0.0/14 dev $PRIVATE`: Route all ip 10.148.x.x to private network.
 
-`/bin/ip route add default dev $PUBLIC: Route other IPs to public network.
+`/bin/ip route add default dev $PUBLIC`: Route other IPs to public network.
