@@ -27,11 +27,12 @@ PUBLIC=eth1
 
 if [ -x /bin/ip ]; then
   echo "Interface $IFACE up"
-	if [ "$IFACE" = "$PRIVATE" ]; then
-		/bin/ip route add 10.148.0.0/14 dev $PRIVATE
-	elif [ "$IFACE" = "$PUBLIC" ]; then
-		/bin/ip route add default dev $PUBLIC
-	fi
+  if [ "$IFACE" = "$PRIVATE" ]; then
+    /bin/ip route add 10.148.0.0/14 dev $PRIVATE
+  elif [ "$IFACE" = "$PUBLIC" ]; then
+    echo "xxx----xxx"
+    #/bin/ip route add default dev $PUBLIC
+  fi
 fi
 ```
 
