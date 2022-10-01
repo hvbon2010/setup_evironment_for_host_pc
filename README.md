@@ -37,6 +37,10 @@ Restart network service
 
 `sudo systemctl restart networking.service`
 
+If this change do not effect, so, we need to reboot OS
+
+`sudo reboot`
+
 # Setup dual network for server
 If we have a server with multiple network interface, 2 LANs or 1 LAN - 1 WIFI. And we want to use one network for local company network, and other for 
 public network, we need to route the IPs to the suitable network.
