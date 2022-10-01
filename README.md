@@ -71,6 +71,14 @@ Change SSH config
 
 <img width="478" alt="image" src="https://user-images.githubusercontent.com/32226325/193379373-c92cf6c2-5c18-45a8-9dad-4ef06574e1ea.png">
 
+Restart SSH service
+
+`sudo systemctl restart ssh.service`
+
+If this change do not effect, so, we need to reboot OS
+
+`sudo reboot`
+
 # Setup dual network for server
 If we have a server with multiple network interface, 2 LANs or 1 LAN - 1 WIFI. And we want to use one network for local company network, and other for 
 public network, we need to route the IPs to the suitable network.
