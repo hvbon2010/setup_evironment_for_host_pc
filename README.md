@@ -33,6 +33,10 @@ iface eth0 inet static
  dns-nameservers 192.168.0.1
 ```
 
+Restart network service
+
+`sudo systemctl restart networking.service`
+
 # Setup dual network for server
 If we have a server with multiple network interface, 2 LANs or 1 LAN - 1 WIFI. And we want to use one network for local company network, and other for 
 public network, we need to route the IPs to the suitable network.
