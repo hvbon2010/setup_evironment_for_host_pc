@@ -41,6 +41,36 @@ If this change do not effect, so, we need to reboot OS
 
 `sudo reboot`
 
+# Remote with SSH key
+On a client PC, you need to generate a SSH key pair
+
+`ssh-keygen -t ed25519`
+
+Copy private key to host PC
+
+`ssh-copy-id -i ~/.ssh/id_ed25519_[xxx] [host_name]@[ip_address]`
+
+Remote
+
+`ssh [host_name]@[ip_address] -i ~/.ssh/id_ed25519_[xxx].pub`
+
+# Secure host PC with SSH authentication
+Change SSH config
+
+`sudo vim /etc/ssh/sshd_config`
+
+- Change SSH port from 22 to other
+
+<img width="319" alt="image" src="https://user-images.githubusercontent.com/32226325/193379357-b2a82e77-2055-4451-9d80-172ee7b8bdad.png">
+
+- Change authentication options (Decrease authengracetime, number of ssh sessions, authen tries. Use authorize key) 
+
+<img width="541" alt="image" src="https://user-images.githubusercontent.com/32226325/193379344-0e6d9745-63e3-4f46-9064-1d22a468ebc7.png">
+
+- Disable authen with password
+
+<img width="478" alt="image" src="https://user-images.githubusercontent.com/32226325/193379373-c92cf6c2-5c18-45a8-9dad-4ef06574e1ea.png">
+
 # Setup dual network for server
 If we have a server with multiple network interface, 2 LANs or 1 LAN - 1 WIFI. And we want to use one network for local company network, and other for 
 public network, we need to route the IPs to the suitable network.
