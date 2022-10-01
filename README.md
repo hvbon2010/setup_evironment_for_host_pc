@@ -1,18 +1,6 @@
 # Introduce
 Setup for basic tools with new host PC: ssh, vim, tmux, ...
 
-# Setup ssh
-
-# Setup vim
-Extract .vim.tar.gz to home folder.
-
-# Setup tmux
-`sudo apt-get install tmux`
-
-`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
-
-`Copy .tmux.conf to home folder.`
-
 # Setup a fixed IP address
 Get network interface you want to fix IP address first
 
@@ -78,6 +66,19 @@ Restart SSH service
 If this change do not effect, so, we need to reboot OS
 
 `sudo reboot`
+
+# Change date time
+`timedatectl set-timezone Asia/Ho_Chi_Minh`
+
+# Setup vim
+Extract .vim.tar.gz to home folder.
+
+# Setup tmux
+`sudo apt-get install tmux`
+
+`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+
+`Copy .tmux.conf to home folder.`
 
 # Setup dual network for server
 If we have a server with multiple network interface, 2 LANs or 1 LAN - 1 WIFI. And we want to use one network for local company network, and other for 
