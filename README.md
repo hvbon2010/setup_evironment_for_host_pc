@@ -20,6 +20,8 @@ Get network interface you want to fix IP address first
 
 `sudo vim /etc/network/interfaces`
 
+Add below code to end of this file
+
 ```
 # Fixed an IP address for eth0
 auto eth0
