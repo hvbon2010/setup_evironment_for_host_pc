@@ -13,6 +13,24 @@ Extract .vim.tar.gz to home folder.
 
 `Copy .tmux.conf to home folder.`
 
+# Setup a fixed IP address
+Get network interface you want to fix IP address first
+
+`ifconfig`
+
+`sudo vim /etc/network/interfaces`
+
+```
+# Fixed an IP address for eth0
+auto eth0
+iface eth0 inet static
+ address 192.168.0.102
+ netmask 255.255.255.0
+ gateway 192.168.0.1
+ dns-domain 192.168.0.1
+ dns-nameservers 192.168.0.1
+```
+
 # Setup dual network for server
 If we have a server with multiple network interface, 2 LANs or 1 LAN - 1 WIFI. And we want to use one network for local company network, and other for 
 public network, we need to route the IPs to the suitable network.
