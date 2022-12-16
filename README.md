@@ -17,9 +17,17 @@ iface eth0 inet static
  address 192.168.0.102
  netmask 255.255.255.0
  gateway 192.168.0.1
- dns-domain 192.168.0.1
- dns-nameservers 192.168.0.1
+ dns-domain 192.168.0.1 8.8.8.8
+ dns-nameservers 192.168.0.1 4.4.4.4
 ```
+
+Restart network service
+
+`sudo systemctl restart networking.service`
+
+If this change do not effect, so, we need to reboot OS
+
+`sudo reboot`
 
 # Check WAN connection
 `ping -c 1 www.google.com`
@@ -36,15 +44,15 @@ How to fix:
 
 Add google dns `8.8.8.8` and `4.4.4.4` to resolv config file
 
-`sudo nano /etc/resolv.conf`
+`sudo mkdir -p /etc/systemd/resolved.conf.d`
 
-![image](https://user-images.githubusercontent.com/32226325/208014532-e3a9b1b6-e5ea-4951-ab79-c35b74ee876d.png)
+`sudo nano /etc/systemd/resolved.conf.d/dns_servers.conf`
 
-Restart network service
-
-`sudo systemctl restart networking.service`
-
-If this change do not effect, so, we need to reboot OS
+```
+[Resolve]
+DNS=8.8.8.8 4.4.4.4
+Domains=~.
+```
 
 `sudo reboot`
 
