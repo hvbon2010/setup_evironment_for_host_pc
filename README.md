@@ -21,6 +21,25 @@ iface eth0 inet static
  dns-nameservers 192.168.0.1
 ```
 
+# Check WAN connection
+`ping -c 1 www.google.com`
+
+## Good connection:
+
+![image](https://user-images.githubusercontent.com/32226325/208014273-49c1d868-7ebe-409b-b27d-48be6c5028c0.png)
+
+## Can not resolved DNS:
+
+![image](https://user-images.githubusercontent.com/32226325/208014343-8b70d75c-91d9-4459-8de9-f4c79bcf845f.png)
+
+How to fix:
+
+Add google dns `8.8.8.8` and `4.4.4.4` to resolv config file
+
+`sudo nano /etc/resolv.conf`
+
+![image](https://user-images.githubusercontent.com/32226325/208014532-e3a9b1b6-e5ea-4951-ab79-c35b74ee876d.png)
+
 Restart network service
 
 `sudo systemctl restart networking.service`
