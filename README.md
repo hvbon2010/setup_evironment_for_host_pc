@@ -146,4 +146,31 @@ sudo ifconfig eth1 up
 
 <img width="553" alt="image" src="https://user-images.githubusercontent.com/32226325/183931406-76a8c480-1ce0-47d1-a0f8-41ffdd72a215.png">
 
+# Auto ssh a host with 2 addresses ip
+Linux:
 
+```
+# any amount of these is possible
+Match originalhost FW_2 exec "nc -vvv -z -w 1 10.148.4.33 22 2>/dev/null"
+    User hvbon
+    HostName 10.148.4.33
+
+# fallback
+Host FW_2
+    User hvbon
+    HostName 192.168.50.2
+```
+
+MACOS: change nc option `-w` to `-G`
+
+```
+# any amount of these is possible
+Match originalhost FW_2 exec "nc -vvv -z -G 1 10.148.4.33 22 2>/dev/null"
+    User hvbon
+    HostName 10.148.4.33
+
+# fallback
+Host FW_2
+    User hvbon
+    HostName 192.168.50.2
+```
