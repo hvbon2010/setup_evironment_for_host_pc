@@ -151,7 +151,7 @@ Linux:
 
 ```
 # any amount of these is possible
-Match originalhost FW_2 exec "nc -vvv -z -w 1 10.148.4.33 22 2>/dev/null"
+Match originalhost FW_2 exec "nc -v -z -w 1 10.148.4.33 22 2>/dev/null"
     User hvbon
     HostName 10.148.4.33
 
@@ -165,7 +165,7 @@ MACOS: change nc option `-w` to `-G`
 
 ```
 # any amount of these is possible
-Match originalhost FW_2 exec "nc -vvv -z -G 1 10.148.4.33 22 2>/dev/null"
+Match originalhost FW_2 exec "nc -v -z -G 1 10.148.4.33 22 2>/dev/null"
     User hvbon
     HostName 10.148.4.33
 
