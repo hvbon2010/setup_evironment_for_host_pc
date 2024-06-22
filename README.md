@@ -101,11 +101,28 @@ If this change do not effect, so, we need to reboot OS
 Extract .vim.tar.gz to home folder.
 
 # Setup tmux
+## Install tmux and tmux plugin manager
 `sudo apt-get install tmux`
 
 `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 
+## Add .tmux.conf sample file
 `Copy .tmux.conf to home folder.`
+
+## Install tmux plugins
+`tmux`
+
+In tmux, run `prefix + I`
+
+with tmux prefix is: `CTRL+B`
+
+Note: I is capital characteristic.
+
+Summary: 
+
+Step 1: CAPsLock on
+
+Step 2: `CTRL+B` -> `I`
 
 # Setup dual network for server
 If we have a server with multiple network interface, 2 LANs or 1 LAN - 1 WIFI. And we want to use one network for local company network, and other for 
