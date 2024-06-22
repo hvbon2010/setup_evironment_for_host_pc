@@ -109,12 +109,15 @@ Extract .vim.tar.gz to home folder.
 ## Add .tmux.conf sample file
 `Copy .tmux.conf to home folder.`
 
+## Run tmux
+`tmux`
+
 ## Reload tmux environment
+In tmux, run 
+
 `tmux source ~/.tmux.conf`
 
 ## Install tmux plugins
-`tmux`
-
 In tmux, run `prefix + I`
 
 with tmux prefix is: `CTRL+B`
