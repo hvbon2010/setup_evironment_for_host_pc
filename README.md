@@ -109,6 +109,9 @@ Extract .vim.tar.gz to home folder.
 ## Add .tmux.conf sample file
 `Copy .tmux.conf to home folder.`
 
+## Reload tmux environment
+`tmux source ~/.tmux.conf`
+
 ## Install tmux plugins
 `tmux`
 
